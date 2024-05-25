@@ -61,3 +61,27 @@ li a:hover{
 #imgBienvenida{
    width: 100%;
 }
+
+
+.populares {
+    text-align: center; /* Centra el texto y puede ayudar a centrar elementos inline-block dentro de este contenedor */
+}
+
+.contenedor-imagenes 
+{
+    display: flex; /* Utiliza flexbox para un control más fino de la alineación */
+    justify-content: center; /* Centra los elementos horizontalmente en el contenedor */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si no caben en una sola */
+    gap: 10px; /* Espaciado entre las imágenes */
+    
+}
+
+.contenedor-imagenes img 
+{
+    max-width: 100%; /* Asegura que las imágenes no sean más grandes que su contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border: 2px solid #000;
+}
+
+
