@@ -16,6 +16,8 @@ namespace Pladau.Controllers
         public IActionResult Index()
         {
             Console.WriteLine("Hello World");
+             Console.WriteLine("Hello World");
+              Console.WriteLine("Hello World");
             return View();
         }
 
