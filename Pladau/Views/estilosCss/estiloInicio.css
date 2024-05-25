@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+   padding: 0; 
+}
+
+
+/*?SECCION DE LA BARRA DE NAVEGACIÓN*/
+
+
+header{
+    width: 100%;
+    background-color:#6E98D8 ;
+}
+
+nav{
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    justify-content:flex-end; 
+    align-items: center;
+    
+
+}
+
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+
+li a{
+    text-decoration: none;
+    color: #FEF5F5;
+    font-size: 26px;
+    font-family: Kodchasan;
+
+}
+
+li{
+    margin: 8px;
+}
+
+
+li a:hover{
+    background-color: #FEF5F5;
+    color:black;
+    border-radius:8px;   
+
+}
+
+#logo{
+   
+    
+    
+
+}
+
+
+
+
+/*IMAGEN DE BIENVENIDA*/
+
+#imgBienvenida{
+   width: 100%;
+}

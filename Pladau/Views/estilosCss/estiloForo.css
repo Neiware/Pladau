@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav {
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    justify-content: space-between; /* Espacia los elementos al máximo */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Estilos para el logo */
+.logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Estilos básicos para el menú */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utiliza flexbox para organizar los <li> en línea */
+}
+
+li {
+    margin-left: 20px; /* Espaciado entre los elementos del menú */
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
