@@ -1,0 +1,53 @@
+[33mcommit 590b9963175043f29eb8ea804d0796b26c1390b8[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/Frontend[m[33m, [m[1;32mFrontend[m[33m)[m
+Author: Esteban Hernandez <estebanm.hloza@gmail.com>
+Date:   Sat May 25 14:18:34 2024 -0600
+
+    Se comenzo por el diseño de la barra de navegación y ademas sobre las navegaciones que hay en la seeción de universidad y las facultades
+
+[33mcommit 1d78ff03e1d7edefffedc998dfbd1791dcbcf6e2[m
+Author: Esteban Hernandez <estebanm.hloza@gmail.com>
+Date:   Sat May 25 13:11:08 2024 -0600
+
+    Elemina la seccion de nosotros y se cambia faculatades por universidades, ademá se inicio con la pagina inicio colocando las imagenes
+
+[33mcommit 88dcbf4933ab4f8be21448c1c0d2f30762807b91[m
+Author: Esteban Hernandez <estebanm.hloza@gmail.com>
+Date:   Sat May 25 01:57:44 2024 -0600
+
+    Se quito los botones incio y registro de sesión, ademas se agrega los archivos, nosotros, facultades, donaciones, secciones de la paginga
+
+[33mcommit 2b19825e0f9c7ab676f189d229a9c6a49a592b1e[m
+Author: Esteban Hernandez <estebanm.hloza@gmail.com>
+Date:   Sat May 25 01:52:30 2024 -0600
+
+    Se termina el archivo index, que es el principio de la página
+
+[33mcommit 446e4ecdfe212f5a2afc69524171ccd600415702[m
+Author: Esteban Hernandez <estebanm.hloza@gmail.com>
+Date:   Sat May 25 01:36:32 2024 -0600
+
+    Ejemplo de esta rama Frontend
+
+[33mcommit 1f610b305da0ccec3edec8f88f02dc9df3c08766[m
+Author: neider cruz <neidercm@hotmail.com>
+Date:   Sat May 25 01:32:39 2024 -0600
+
+    Fisrt Commit Nei
+
+[33mcommit 6f1cb5b99abefc2567cfaed26103113994a5ecd5[m
+Author: Esteban Hernandez <estebanm.hloza@gmail.com>
+Date:   Sat May 25 01:30:37 2024 -0600
+
+    ejejmplo de sfads
+
+[33mcommit 41e9875d623fa7bb88c969cc8ccce4e8871e4c07[m
+Author: neider cruz <neidercm@hotmail.com>
+Date:   Sat May 25 01:08:41 2024 -0600
+
+    Add project files.
+
+[33mcommit d92e1556e2d677e8951cde3e0799e6233063c678[m
+Author: neider cruz <neidercm@hotmail.com>
+Date:   Sat May 25 01:08:39 2024 -0600
+
+    Add .gitattributes, .gitignore, README.md, and LICENSE.txt.
