@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 using PladauAPI.Models;
 using PladauAPI.Services;
 
@@ -27,6 +28,22 @@ namespace PladauAPI.Controllers
         {
             await _mongoDBService.CreateAsync<University>(CollectionName, university);
             return CreatedAtAction(nameof(Get), new { id = university.Id }, university);
+        }
+
+        [HttpPut("{id:length(24)}")]
+        public async Task<IActionResult> Update(string id, [FromBody] University updatedUniversity)
+        {
+            var existingUniversity = await _mongoDBService.GetByIdAsync<University>(CollectionName, id);
+
+            if (existingUniversity == null)
+            {
+                return NotFound();
+            }
+
+            updatedUniversity.Id = id;
+            await _mongoDBService.ReplaceAsync(CollectionName, id, updatedUniversity);
+
+            return NoContent();
         }
     }
 }

@@ -28,5 +28,21 @@ namespace PladauAPI.Controllers
             await _mongoDBService.CreateAsync<Carrer>(CollectionName, carrer);
             return CreatedAtAction(nameof(Get), new { id = carrer.Id }, carrer);
         }
+
+        [HttpPut("{id:length(24)}")]
+        public async Task<IActionResult> Update(string id, [FromBody] Carrer updatedCarrer)
+        {
+            var existingCarrer = await _mongoDBService.GetByIdAsync<Carrer>(CollectionName, id);
+
+            if (existingCarrer == null)
+            {
+                return NotFound();
+            }
+
+            updatedCarrer.Id = id;
+            await _mongoDBService.ReplaceAsync(CollectionName, id, updatedCarrer);
+
+            return NoContent();
+        }
     }
 }

@@ -28,5 +28,21 @@ namespace PladauAPI.Controllers
             await _mongoDBService.CreateAsync<Subject>(CollectionName, subject);
             return CreatedAtAction(nameof(Get), new { id = subject.Id }, subject);
         }
+
+        [HttpPut("{id:length(24)}")]
+        public async Task<IActionResult> Update(string id, [FromBody] Subject updateSubject)
+        {
+            var existingSubject = await _mongoDBService.GetByIdAsync<Subject>(CollectionName, id);
+
+            if (existingSubject == null)
+            {
+                return NotFound();
+            }
+
+            updateSubject.Id = id;
+            await _mongoDBService.ReplaceAsync(CollectionName, id, updateSubject);
+
+            return NoContent();
+        }
     }
 }

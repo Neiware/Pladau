@@ -13,6 +13,7 @@ namespace PladauAPI.Services
         {
             _context = context;            
         }
+
         #region ADMIN CONTROLLER
         public async Task<List<T>> GetAllAsync<T>(string collectionName)
         {
@@ -43,10 +44,21 @@ namespace PladauAPI.Services
             var collection = _context.GetCollection<T>(collectionName);
             await collection.DeleteOneAsync(Builders<T>.Filter.Eq("Id", id));
         }
+
+        public async Task UpdateAsync<T>(string collectionName, string id, UpdateDefinition<T> updateDefinition)
+        {
+            var collection = _context.GetCollection<T>(collectionName);
+            var filter = Builders<T>.Filter.Eq("Id", id);
+            await collection.UpdateOneAsync(filter, updateDefinition);
+        }
+
+        public async Task ReplaceAsync<T>(string collectionName, string id, T updatedDocument)
+        {
+            var collection = _context.GetCollection<T>(collectionName);
+            var filter = Builders<T>.Filter.Eq("Id", id);
+            await collection.ReplaceOneAsync(filter, updatedDocument);
+        }
         #endregion
 
-        #region UNIVERSITY CONTROLLER
-
-        #endregion
     }
 }
