@@ -117,3 +117,6 @@ li a:hover{
         flex-direction: column;  /* Cambia a disposición vertical en pantallas pequeñas */
     }
 }
+.texto-derecha {
+    text-align: right;  /* Alinea el texto a la derecha */
+}
