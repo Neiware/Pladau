@@ -71,7 +71,7 @@ li a:hover{
     justify-content: center; /* Centra los elementos horizontalmente en el contenedor */
     align-items: center; /* Alinea los elementos verticalmente en el centro */
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si no caben en una sola */
-    gap: 10px;
+    gap: 50px;
      /* Espaciado entre las imágenes */
 }
 
