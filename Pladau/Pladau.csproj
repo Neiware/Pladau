@@ -7,7 +7,45 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\estilosCss\estiloDonaciones.css" />
+    <None Include="wwwroot\css\estilosCss\estiloForo.css" />
+    <None Include="wwwroot\css\estilosCss\estiloInicio.css" />
+    <None Include="wwwroot\css\estilosCss\estilosUniversidades\estilosUanl\Uanlfacultades.css" />
+    <None Include="wwwroot\css\estilosCss\estiloUniversidad.css" />
+    <None Include="wwwroot\Images\Bienvenida.jpg" />
+    <None Include="wwwroot\Images\CNC 1.png" />
+    <None Include="wwwroot\Images\Ellipse FACDYC.png" />
+    <None Include="wwwroot\Images\Ellipse FACPYA.png" />
+    <None Include="wwwroot\Images\Ellipse FARQ.png" />
+    <None Include="wwwroot\Images\Ellipse FIME.png" />
+    <None Include="wwwroot\Images\facdyc.png" />
+    <None Include="wwwroot\Images\facpya.png" />
+    <None Include="wwwroot\Images\fime.jpg" />
+    <None Include="wwwroot\Images\FimePopular.png" />
+    <None Include="wwwroot\Images\FisicaejemploPopular.png" />
+    <None Include="wwwroot\Images\foro2.png" />
+    <None Include="wwwroot\Images\INTEGRALES 1.png" />
+    <None Include="wwwroot\Images\LIBROS.jpg" />
+    <None Include="wwwroot\Images\LIBROS_PDF.jpg" />
+    <None Include="wwwroot\Images\Logo_de_la_UANL.png" />
+    <None Include="wwwroot\Images\logo_UERRE.jpg" />
+    <None Include="wwwroot\Images\logo_UERRE.png" />
+    <None Include="wwwroot\Images\MATERIAL ESCOLAR 1.png" />
+    <None Include="wwwroot\Images\PLADAU.png" />
+    <None Include="wwwroot\Images\Rectangle 3.png" />
+    <None Include="wwwroot\Images\Rectangle 6.png" />
+    <None Include="wwwroot\Images\Universidades\UANL\FIME\ICONO-ADSISTEM.png" />
+    <None Include="wwwroot\Images\Universidades\UANL\FIME\ICONO-ELECTRONICA.png" />
+    <None Include="wwwroot\Images\Universidades\UANL\FIME\ICONO-MECATRONICA.png" />
+    <None Include="wwwroot\Images\Universidades\UANL\FIME\Red-Materias-Mecatronica.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="2.25.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>

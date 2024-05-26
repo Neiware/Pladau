@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/Pladau.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pladau</a>
@@ -29,6 +29,22 @@
                 </div>
             </div>
         </nav>
+    </header> *@
+    <header>
+        <div class="titulo">
+            <img id="logo" src="ImgPladau/PLADAU.png" alt="LOGO PLADAU">
+        </div>
+        <div id="navegacion">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="universidades.html">Universidades</a></li>
+                    <li><a href="donaciones.html">Donaciones</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+
+                </ul>
+            </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">

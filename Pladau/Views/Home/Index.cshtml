@@ -2,7 +2,91 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <title>PLADAU</title>
+    <link rel="stylesheet" href="~/css/estilosCss/estiloInicio.css" asp-append-version="true" />
+    <link rel="stylesheet" href="" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!--Encabezado de la Pagina web, logo y menú-->
+
+    <section>
+        <!--SECCION DE LOS MAS POPULARES Y EL SLIDER DE BIENVENIDA ENTRE OTROS-->
+        <div>
+            <img id="imgBienvenida" src="/Images/Bienvenida.jpg" alt="Imagen de ilustracion para la bienvenida">
+        </div>
+
+        <div class="populares">
+            <!--DE LOS MAS POPULARES-->
+            <p>LOS MAS POPULARES</p>
+
+            <div class="contenedor-imagenes">
+                <img src="/css/" alt="Descripción Fime Popular">
+                <img src="ImgPladau/FisicaejemploPopular.png" alt="Descripción Física Ejemplo Popular">
+                <img src="ImgPladau/CNC 1.png" alt="Descripción CNC">
+                <img src="ImgPladau/INTEGRALES 1.png" alt="Descripción Integrales">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="seccion-compra">
+        <!-- Sección de Material Escolar -->
+        <div class="item-compra">
+            <div class="imagen">
+                <a href="link-a-material-escolar.html">
+                    <img id="materialEscolar" src="ImgPladau/MATERIAL ESCOLAR 1.png" alt="Material Escolar">
+
+                </a>
+            </div>
+            <div class="descripcion">
+                <p>En esta parte puedes comprar el material que necesitas, de la carrera que estudias facilitando tu búsqueda de los materiales que ocupes.</p>
+            </div>
+        </div>
+
+        <!-- Sección de Libros -->
+        <div class="item-compra">
+            <div class="imagen">
+                <a href="compra_libros.html">
+                    <img id="librosPDF" src="ImgPladau/LIBROS.jpg" alt="Libros y PDF">
+
+                </a>
+            </div>
+            <div class="descripcion2">
+                <p>Podrás buscar los libros que ocupas en tu materia, aunque no solo los libros físicos sino también digitales, esto para ahorrarte el tiempo.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Pie de pagina-->
+    @* <footer>
+        <div id="pie_de_pagina">
+            <p id="derechos_reservados">
+                PALADAU S.A DE C.V <br>
+                ALL RIGTHS RESERVED 2023 <br>
+            </p>
+
+            <ul id="redes_sociales">
+                <a href="https://www.facebook.com">
+                <li>Facebook</li></a>
+                <a href="https://www.instagram.com">
+                <li>Instagram</li></a>
+                <a href="https://wwww.youtube.com">
+                <li>Youtube</li></a>
+            </ul>
+        </div>
+    </footer> *@
+</body>
+</html>
