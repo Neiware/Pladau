@@ -14,7 +14,7 @@ namespace PladauAPI.Services
             _context = context;            
         }
 
-        #region ADMIN CONTROLLER
+        #region General 
         public async Task<List<T>> GetAllAsync<T>(string collectionName)
         {
             var collection = _context.GetCollection<T>(collectionName);
@@ -58,7 +58,62 @@ namespace PladauAPI.Services
             var filter = Builders<T>.Filter.Eq("Id", id);
             await collection.ReplaceOneAsync(filter, updatedDocument);
         }
+
+        public async Task<List<Faculty>> GetFacultiesByIdUni(string id)
+        {
+            University university = await GetByIdAsync<University>("universities", id);
+            if (university == null)
+            {
+                // Manejar el caso en que la universidad no exista
+                return new List<Faculty>(); // O lanzar una excepción, dependiendo de la lógica de tu aplicación
+            }
+
+            // Extraer los IDs de las facultades del arreglo en el documento de la universidad
+            var facultyIds = university.FacultyIds;
+
+            // Usar los IDs de las facultades para buscar las facultades correspondientes en la colección de facultades
+            var faculties = await _context.GetAsync<Faculty>("faculties", f => facultyIds.Contains(f.Id));
+
+            return faculties;
+        }
+
+        public async Task<List<Carrer>> GetCarrersByIdFaculty(string id)
+        {
+            Faculty faculty = await GetByIdAsync<Faculty>("faculties", id);
+            if (faculty == null)
+            {
+                // Manejar el caso en que la universidad no exista
+                return new List<Carrer>(); // O lanzar una excepción, dependiendo de la lógica de tu aplicación
+            }
+
+            // Extraer los IDs de las facultades del arreglo en el documento de la universidad
+            var carrerIds = faculty.CarrerIds;
+
+            // Usar los IDs de las facultades para buscar las facultades correspondientes en la colección de facultades
+            var carrers = await _context.GetAsync<Carrer>("carrers", f => carrerIds.Contains(f.Id));
+
+            return carrers;
+        }
+
+        public async Task<List<Subject>> GetSubjectsByIdCarrers(string id)
+        {
+            Carrer carrer = await GetByIdAsync<Carrer>("carrers", id);
+            if (carrer == null)
+            {
+                // Manejar el caso en que la universidad no exista
+                return new List<Subject>(); // O lanzar una excepción, dependiendo de la lógica de tu aplicación
+            }
+
+            // Extraer los IDs de las facultades del arreglo en el documento de la universidad
+            var subjectIds = carrer.SubjectIds;
+
+            // Usar los IDs de las facultades para buscar las facultades correspondientes en la colección de facultades
+            var subjects = await _context.GetAsync<Subject>("subjects", f => subjectIds.Contains(f.Id));
+
+            return subjects;
+        }
         #endregion
+
 
     }
 }

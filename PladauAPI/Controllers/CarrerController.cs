@@ -21,6 +21,12 @@ namespace PladauAPI.Controllers
         {
             return await _mongoDBService.GetAllAsync<Carrer>(CollectionName);
         }
+        [HttpGet("carrers/{id}/subjects")]
+        public async Task<List<Subject>> GetSubjectsByIdCarrers(string id)
+        {
+            return await _mongoDBService.GetSubjectsByIdCarrers(id);
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Carrer carrer)

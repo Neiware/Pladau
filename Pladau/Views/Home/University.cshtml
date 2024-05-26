@@ -4,44 +4,23 @@
 @{
 }
 @model IEnumerable<University>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Universidades</title>
-</head>
-<body>
- 
-<main>
-        <section>
-            <h1>Universidades</h1>
-            <div class="caja-universidad" id="cajaUANL">
-                <div class="logo-universidad">
-                    <img src="~/Imagenes/Logo-Uanl.jpg" alt="Logo de la UANL">
-                </div>
-
-                
-                <div class="info-universidad">
-                    <a href="Universidades/UANL/Facultadesuanl.html">Universidad Autónoma de Nuevo León</a>
-                    <p>Esta universidad está ubicada en la ciudad de San Nicolás de los Garza.</p>
-                </div>
-            </div>
-        
-            <div class="caja-universidad" id="cajaUERRE">
-                <div class="logo-universidad">
-                    <img src="~/Imagenes/Logo-Uerre.jpg" alt="Logo U-ERRE">
-                </div>
-                <div class="info-universidad">
-                    <a href="Universidades/UERRE/FacultadesUerre.html">Universidad U-ERRE</a>
-                    <p>Esta Universidad está ubicada en Monterrey.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    
+    <h1>Universidades</h1>
+    <p>En esta pagina se mostrara todas las uninversidades disponibles a consultar. Por favor, ¡selecciona la de tu interes!</p>
+    <ul style="list-style: none; padding: 0;">
+        @foreach (var university in Model)
+        {
+            <li style="background-color: #f0f0f0; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;">
+                <a href="@Url.Action("Faculty", "Home", new { universityId = university.Id })" style="display: grid; grid-template-columns: auto 1fr; gap: 10px; text-decoration: none; padding: 10px;">
+                    <img src="@university.LogoUrl" alt="@university.Name" style="max-width: 100px; height: auto; border-radius: 5px;" />
+                    <div>
+                        <label style="margin: 0 0 5px 0; font-weight: bold;">@university.Name</label>
+                        <p style="margin: 0;">@university.Description</p>
+                    </div>
+                </a>
+            </li>
+        }
+    </ul>
+      
 
 
-
-
-</body>
-</html>

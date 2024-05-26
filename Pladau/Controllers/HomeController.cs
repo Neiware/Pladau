@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson.IO;
 using Pladau.Models;
 using Pladau.Services;
 using System.Diagnostics;
@@ -29,17 +30,27 @@ namespace Pladau.Controllers
             return View(universities);
 
         }
-
-        public async Task<IActionResult> Carrer(int id)
+        public async Task<IActionResult> Faculty(string universityId)
         {
-            var universities = await _apiService.GetAllUniversitiesAsync();
-            return View(universities);
+            var faculties = await _apiService.GetFacultiesByIdUni(universityId);
+            return View(faculties);
         }
 
-        public async Task<IActionResult> Subject()
+        public async Task<IActionResult> Carrer(string facultyId)
         {
+            var carrers = await _apiService.GetCarrerByIdFaculty(facultyId);
+            return View(carrers);
+        }
 
-            return View()
+        public async Task<IActionResult> Subject(string carrerId)
+        {
+            var subjects = await _apiService.GetSubjectsByIdCarrers(carrerId);
+            return View(subjects);
+        }
+        
+        public IActionResult Donation()
+        {
+            return View();
         }
         public IActionResult Privacy()
         {

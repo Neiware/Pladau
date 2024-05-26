@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Subject>
+
+
+<h1>Materias</h1>
+<p>
+    Aquí se puede observar todas las materias que tiene la carrera
+</p>
+<ul style="list-style: none; padding: 0;">
+    @foreach (var subject in Model)
+    {
+        <li style="background-color: #f0f0f0; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;">
+            <img src="@subject.LogoUrl" alt="@subject.Name" style="max-width: 100px; height: auto; border-radius: 5px;" />
+            <div>
+                <label style="margin: 0 0 5px 0; font-weight: bold;">@subject.Name</label>
+                <p style="margin: 0;"> @subject.Description</p>
+                <p style="margin: 0;">  @subject.DeliveryType</p>
+                <p style="margin: 0;">  @subject.RequiredSubjectIds</p>
+                <p style="margin: 0;">  @subject.TotalTerms</p>
+                <p style="margin: 0;">  @subject.PopularPostId</p>
+            </div>
+        </li>
+    }
+</ul>
