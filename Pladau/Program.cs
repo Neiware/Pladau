@@ -1,3 +1,5 @@
+using Pladau.Services;
+
 namespace Pladau
 {
     public class Program
@@ -8,6 +10,8 @@ namespace Pladau
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddHttpClient(); // Register HttpClient
+            builder.Services.AddSingleton<ApiService>();
 
             var app = builder.Build();
 
