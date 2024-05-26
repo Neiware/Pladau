@@ -21,9 +21,26 @@ namespace Pladau.Controllers
             return View(admins);
         }
 
+        public async Task<IActionResult> University()
+        {
+            var universities = await _apiService.GetAllUniversitiesAsync();
+            return View(universities);
+        }
+
+        public async Task<IActionResult> Carrer()
+        {
+            var universities = await _apiService.GetAllUniversitiesAsync();
+            return View(universities);
+        }
         public IActionResult Privacy()
         {
             return View();
+        }
+
+
+        public IActionResult Modify()
+        {
+            return RedirectToAction("Index", "Modify");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -16,4 +16,5 @@ public class Subject:BaseModel
     public List<string>? RequiredSubjectIds { get; set; }
     public string? LogoUrl { get; set; }
     public string? PopularPostId{ get; set; }
+    public List<string>? CarrerIds { get; set; }
 }

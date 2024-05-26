@@ -7,12 +7,12 @@ namespace PladauAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UnivesityController : ControllerBase
+    public class UniversityController : ControllerBase
     {
         private readonly MongoDBService _mongoDBService;
-        private readonly string CollectionName = "universities";
+        private readonly string CollectionName = "university";
 
-        public UnivesityController(MongoDBService mongoDBService)
+        public UniversityController(MongoDBService mongoDBService)
         {
             _mongoDBService = mongoDBService;
         }
