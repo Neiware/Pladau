@@ -12,20 +12,36 @@
     <title>Universidades</title>
 </head>
 <body>
-    <h1>Universidades</h1>
-    <ul>
-        @foreach (var university in Model)
-        {
-            <li>
+ 
+<main>
+        <section>
+            <h1>Universidades</h1>
+            <div class="caja-universidad" id="cajaUANL">
+                <div class="logo-universidad">
+                    <img src="~/Imagenes/Logo_de_la_UANL.png" alt="Logo de la UANL">
+                </div>
 
-                <a href="@Url.Action("Carreras", "Home", new { universityId = university.Id })">
-                    @* <img src="@university.LogoUrl" alt="@university.Name" /> *@
-                </a>
-                <p>@university.Name</p>
-                <p>@university.Description</p>
-                <p>@university.Id</p>
-            </li>
-        }
-    </ul>
+                
+                <div class="info-universidad">
+                    <a href="Universidades/UANL/Facultadesuanl.html">Universidad Autónoma de Nuevo León</a>
+                    <p>Esta universidad está ubicada en la ciudad de San Nicolás de los Garza.</p>
+                </div>
+            </div>
+        
+            <div class="caja-universidad" id="cajaUERRE">
+                <div class="logo-universidad">
+                    <img src="~/Imagenes/logo_UERRE.png" alt="Logo U-ERRE">
+                </div>
+                <div class="info-universidad">
+                    <a href="Universidades/UERRE/FacultadesUerre.html">Universidad U-ERRE</a>
+                    <p>Esta Universidad está ubicada en Monterrey.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
 </body>
 </html>
