@@ -30,10 +30,16 @@ namespace Pladau.Controllers
 
         }
 
-        public async Task<IActionResult> Carrer()
+        public async Task<IActionResult> Carrer(int id)
         {
             var universities = await _apiService.GetAllUniversitiesAsync();
             return View(universities);
+        }
+
+        public async Task<IActionResult> Subject()
+        {
+
+            return View()
         }
         public IActionResult Privacy()
         {

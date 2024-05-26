@@ -11,7 +11,7 @@ namespace PladauAPI.Controllers
     public class UniversityController : ControllerBase
     {
         private readonly MongoDBService _mongoDBService;
-        private readonly string CollectionName = "university";
+        private readonly string CollectionName = "universities";
 
         public UniversityController(MongoDBService mongoDBService)
         {

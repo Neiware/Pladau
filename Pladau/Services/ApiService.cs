@@ -29,7 +29,7 @@ public class ApiService
     }
     public async Task<List<University>> GetAllUniversitiesAsync()
     {
-        var response = await _httpClient.GetAsync($"{APIURI}university");
+        var response = await _httpClient.GetAsync($"{APIURI}universities");
         response.EnsureSuccessStatusCode();
 
         var json = await response.Content.ReadAsStringAsync();
