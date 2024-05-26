@@ -13,16 +13,20 @@
 <ul style="list-style: none; padding: 0;">
     @foreach (var subject in Model)
     {
+        
         <li style="background-color: #f0f0f0; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;">
+            
             <img src="@subject.LogoUrl" alt="@subject.Name" style="max-width: 100px; height: auto; border-radius: 5px;" />
             <div>
+                <a href="@Url.Action("RecommendedBySubject", "Home", new { subjectId = subject.Id })">
                 <label style="margin: 0 0 5px 0; font-weight: bold;">@subject.Name</label>
+                </a>
                 <p style="margin: 0;"> @subject.Description</p>
                 <p style="margin: 0;">  @subject.DeliveryType</p>
-                <p style="margin: 0;">  @subject.RequiredSubjectIds</p>
                 <p style="margin: 0;">  @subject.TotalTerms</p>
                 <p style="margin: 0;">  @subject.PopularPostId</p>
             </div>
+            
         </li>
     }
 </ul>

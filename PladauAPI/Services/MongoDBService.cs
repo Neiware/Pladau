@@ -107,6 +107,7 @@ namespace PladauAPI.Services
             // Extraer los IDs de las facultades del arreglo en el documento de la universidad
             var subjectIds = carrer.SubjectIds;
 
+
             // Usar los IDs de las facultades para buscar las facultades correspondientes en la colección de facultades
             var subjects = await _context.GetAsync<Subject>("subjects", f => subjectIds.Contains(f.Id));
 

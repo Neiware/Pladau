@@ -15,14 +15,15 @@
     @foreach (var carrer in Model)
     {
         <li style="background-color: #f0f0f0; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;">
-            <a href="@Url.Action("Subject", "Home", new { carrerId = carrer.Id })" style="display: grid; grid-template-columns: auto 1fr; gap: 10px; text-decoration: none; padding: 10px;">
-                <img src="@carrer.LogoUrl" alt="@carrer.Name" style="max-width: 100px; height: auto; border-radius: 5px;" />
-                <div>
+            <img src="@carrer.LogoUrl" alt="@carrer.Name" style="max-width: 100px; height: auto; border-radius: 5px;" />
+            <div>
+                <a href="@Url.Action("Subject", "Home", new { carrerId = carrer.Id })">
                     <label style="margin: 0 0 5px 0; font-weight: bold;">@carrer.Name</label>
-                    <p style="margin: 0;"> Tipo de Curso: @carrer.AcademicTermType</p>
-                    <p style="margin: 0;"> Duracion en años: @carrer.DurationInYears</p>
-                </div>
-            </a>
+                </a>
+                <p style="margin: 0;"> Tipo de Curso: @carrer.AcademicTermType</p>
+                <p style="margin: 0;"> Duracion en años: @carrer.DurationInYears</p>
+            </div>
+            
         </li>
     }
 </ul>
@@ -39,29 +40,3 @@
             </li>
         }
     </ul> *@
-
-<div>
-    <h1>FACULTAD DE INGENIERIA MECANICA Y ELECTRICA</h1>
-    <p>
-        La oferta de licenciatura es de 11 Programas Educativos respaldados en función de su acreditación
-        por diferentes organismos Nacionales e Internacionales como son CACEI,
-        CIEES, EURACE y ABET.
-    </p>
-</div>
-
-
-<div class="carreras">
-    <a href="/Pladau/Views/Universidades/UANL/Carreras-Fime/mectronicaFime.html"><img src="/Pladau/Views/ImgPladau/Universidades/UANL/FIME/ICONO-MECATRONICA.png" alt=""></a>
-    <p>MECATRONICA</p>
-</div>
-
-<div>
-    <a href=""><img src="/Pladau/Views/ImgPladau/Universidades/UANL/FIME/ICONO-ADSISTEM.png" alt=""></a>
-    <p>ADMINISTRACIÓN DE SOFTWARE</p>
-</div>
-
-
-<div>
-    <a href=""><img src="/Pladau/Views/ImgPladau/Universidades/UANL/FIME/ICONO-ELECTRONICA.png" alt=""></a>
-    <p>ELECTRONICA Y AUTOMATIZACIÓN</p>
-</div>

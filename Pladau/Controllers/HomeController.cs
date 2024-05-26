@@ -47,11 +47,23 @@ namespace Pladau.Controllers
             var subjects = await _apiService.GetSubjectsByIdCarrers(carrerId);
             return View(subjects);
         }
-        
+
+        public async Task<IActionResult> RecommendedBySubject(string subjectId)
+        {
+            var subject = await _apiService.GetSubjectById(subjectId);
+            return View(subject);
+        }
+        public async Task<IActionResult> Foro()
+        {
+            var post = await _apiService.GetAllPost();
+            return View(post);
+        }
         public IActionResult Donation()
         {
             return View();
         }
+
+        
         public IActionResult Privacy()
         {
             return View();

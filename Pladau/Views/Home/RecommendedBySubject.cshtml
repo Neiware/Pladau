@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Subject
+
+<div class="container">
+    <h1>@Model.Name</h1>
+    <p>@Model.Description]</p>
+
+    <div class="recommendations">
+        <h2>Recomendaciones de Libros</h2>
+        <ul>
+            <li><a href="#">Libro 1</a></li>
+            <li><a href="#">Libro 2</a></li>
+            <li><a href="#">Libro 3</a></li>
+        </ul>
+    </div>
+
+    <div class="recommendations">
+        <h2>Recomendaciones de Videos</h2>
+        <ul>
+            <li><a href="#">Video 1</a></li>
+            <li><a href="#">Video 2</a></li>
+            <li><a href="#">Video 3</a></li>
+        </ul>
+    </div>
+
+    <!-- Agrega más secciones según sea necesario -->
+</div>
+
+<link rel="stylesheet" href="~/css/estilosCss/estiloInicio.css" asp-append-version="true" />

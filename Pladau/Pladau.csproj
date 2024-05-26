@@ -36,7 +36,7 @@
     <None Include="wwwroot\Images\Rectangle 6.png" />
     <None Include="wwwroot\Images\Universidades\UANL\FIME\ICONO-ADSISTEM.png" />
     <None Include="wwwroot\Images\Universidades\UANL\FIME\ICONO-ELECTRONICA.png" />
-    <None Include="wwwroot\Images\Universidades\UANL\FIME\ICONO-MECATRONICA.png" />
+    <None Include="wwwroot\Images\ICONO-MECATRONICA.png" />
     <None Include="wwwroot\Images\Universidades\UANL\FIME\Red-Materias-Mecatronica.png" />
   </ItemGroup>
 

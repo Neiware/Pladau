@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Pladau.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/estilosCss/estiloInicio.css" asp-append-version="true" />
+    
     <link rel="stylesheet" href="" type="text/css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
 
         <title>PLADAU</title>
         <div class="titulo">
-            <img id="logo" src="Images/PLADAU.png" alt="LOGO PLADAU">
+            <img id="logo" src="/Images/PLADAU.png" alt="LOGO PLADAU">
         </div>
         <div id="navegacion">
             <nav>
@@ -52,7 +52,7 @@
                     <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
                     <li><a href="@Url.Action("University", "Home") ">Universidades</a></li>
                     <li><a href="@Url.Action("Donation", "Home")">Donaciones</a></li>
-                    <li><a href="foro.html">Foro</a></li>
+                    <li><a href="@Url.Action("Foro", "Home")">Foro</a></li>
 
                 </ul>
             </nav>

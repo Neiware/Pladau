@@ -5,13 +5,6 @@
 
 
 
-nav {
-    display: flex; /* Utiliza flexbox para organizar el contenido */
-    justify-content: space-between; /* Espacia los elementos al máximo */
-    align-items: center; /* Centra los elementos verticalmente */
-    background-color: #333;
-    padding: 10px;
-}
 
 /* Estilos para el logo */
 .logo {

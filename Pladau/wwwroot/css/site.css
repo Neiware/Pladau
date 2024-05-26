@@ -17,12 +17,54 @@ html {
   min-height: 100%;
 }
 
-/* body {
+ body {
   margin-bottom: 60px;
-} */
+}
 
 
-*{
-  padding: 0;
-  margin: 0;
+/*?SECCION DE LA BARRA DE NAVEGACIÓN*/
+
+
+header {
+    width: 100%;
+    height: 80px;
+    ;
+    background-color: #6E98D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navegacion ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+    #navegacion ul li {
+        margin: 0 10px;
+        padding: 0;
+        border: 0;
+    }
+
+        #navegacion ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: Kodchasan;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+
+
+nav {
+    margin-right: 25px;
+}
+
+#logo {
+    margin-left: 25px;
+    margin-top: 10px;
 }

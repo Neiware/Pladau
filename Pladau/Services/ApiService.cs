@@ -70,4 +70,26 @@ public class ApiService
 
         return subjects;
     }
+
+    public async Task<Subject> GetSubjectById(string id)
+    {
+        var response = await _httpClient.GetAsync($"{APIURI}subject/{id}/subjects");
+        response.EnsureSuccessStatusCode();
+
+        var json = await response.Content.ReadAsStringAsync();
+        var subject = JsonSerializer.Deserialize<Subject>(json, jsonOptions);
+
+        return subject;
+    }
+
+    public async Task<List<Post>> GetAllPost()
+    {
+        var response = await _httpClient.GetAsync($"{APIURI}post");
+        response.EnsureSuccessStatusCode();
+
+        var json = await response.Content.ReadAsStringAsync();
+        var Posts = JsonSerializer.Deserialize<List<Post>>(json, jsonOptions);
+
+        return Posts;
+    }
 }

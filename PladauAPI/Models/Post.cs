@@ -3,6 +3,8 @@
 public class Post : BaseModel
 {
     public string? Title { get; set; }
+    public string? Username { get; set; }
+    public string? SubjectName { get; set; }
     public string? Content { get; set; }
     public DateOnly CreatedAt { get; set; }
     public DateOnly UpdatedAt { get; set; }
