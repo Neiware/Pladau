@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+   padding: 0; 
+}
+
+
+/*?SECCION DE LA BARRA DE NAVEGACIÓN*/
+
+
+header {
+    width: 100%;
+    height: 80px;;
+    background-color: #6E98D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navegacion ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+#navegacion ul li {
+    margin: 0 10px;
+    padding: 0;
+    border: 0;
+   
+}
+
+#navegacion ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Kodchasan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    
+}
+
+
+
+nav{
+    margin-right: 25px;
+}
+
+#logo{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+/*IMAGEN DE BIENVENIDA*/
+
+#imgBienvenida{
+   width: 100%;
+}
+
+.populares {
+    text-align: center;
+    font-family: Kodchasan;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 52px;
+    text-align: center;
+ /* Centra el texto y puede ayudar a centrar elementos inline-block dentro de este contenedor */
+}
+
+.contenedor-imagenes {
+    display: flex; /* Utiliza flexbox para un control más fino de la alineación */
+    justify-content: center; /* Centra los elementos horizontalmente en el contenedor */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si no caben en una sola */
+    gap: 50px;
+     /* Espaciado entre las imágenes */
+}
+
+.contenedor-imagenes img {
+    max-width: 100%; /* Asegura que las imágenes no sean más grandes que su contenedor */
+    height: auto;
+    border: 2px solid #000; /* Mantiene la proporción de las imágenes */
+}
+
+/*? SECCION DE COMPRAR LIBROS Y MATERIALES*/
+
+
+/** SECCION DE MATERIAL DISEÑO  */
+
+.item-compra{
+    display: relative;
+}
+
+#materialEscolar{
+    width: 800px;
+    max-width: 1098px;
+    max-height: 521px;
+    float: left;
+  
+}
+
+.descripcion{
+    display: block;
+    position: absolute;
+    background-color: #264B6C;
+    width:80%;
+    height: 380px;
+    margin-left: 800px;
+    
+    margin-right: auto;
+}
+
+p{
+    padding-top: 117px;
+    padding-bottom: 135px;
+    text-align: center;
+    
+}
+
+
+#librosPDF{
+    width: 950px;
+    max-width: 1104px;
+    height: 464px;
+    float:right;
+}
+
+
+.descripcion2{
+    display: block;
+    position: absolute;
+    width: 353px;
+    height: 464px;
+    background-color:#264B6C ;
+    margin-top: 380px;
+}
+
+
+
+
+/**?  PIE DE PAGINA */
+
+footer{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 820px;
+}
+
+
+.pie_de_pagina{
+    display: flex;
+    align-items: flex-end;
+}
+

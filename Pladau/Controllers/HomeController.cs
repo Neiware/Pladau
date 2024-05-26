@@ -17,6 +17,8 @@ namespace Pladau.Controllers
 
         public async Task<IActionResult> Index()
         {
+
+
             var admins = await _apiService.GetAdminAsync();
             return View(admins);
         }
@@ -25,6 +27,7 @@ namespace Pladau.Controllers
         {
             var universities = await _apiService.GetAllUniversitiesAsync();
             return View(universities);
+
         }
 
         public async Task<IActionResult> Carrer()
