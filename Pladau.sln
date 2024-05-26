@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pladau", "Pladau\Pladau.csproj", "{ADF827D2-17D1-42D1-8CC6-7E956C5BBB48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PladauAPI", "PladauAPI\PladauAPI.csproj", "{46465BCE-3F74-48BB-B949-AAA0DEDDFD5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{ADF827D2-17D1-42D1-8CC6-7E956C5BBB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADF827D2-17D1-42D1-8CC6-7E956C5BBB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADF827D2-17D1-42D1-8CC6-7E956C5BBB48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46465BCE-3F74-48BB-B949-AAA0DEDDFD5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46465BCE-3F74-48BB-B949-AAA0DEDDFD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46465BCE-3F74-48BB-B949-AAA0DEDDFD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46465BCE-3F74-48BB-B949-AAA0DEDDFD5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Carrer>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Carreras</title>
+</head>
+<body>
+    <h1>Universidades</h1>
+    <ul>
+        @foreach (var carrera in Model)
+        {
+            <li>
+
+                @* <a href="@Url.Action("Carreras", "Home", new { universityId = university.Id })">
+                    @* <img src="@university.LogoUrl" alt="@university.Name" /> 
+                </a> *@
+                <p>@carrera.Name</p>
+                <p>@carrera.AcademicTermType</p>
+                <p>@carrera.DurationInYears</p>
+                <p>@carrera.Id</p>
+            </li>
+        }
+    </ul>
+</body>
+</html>

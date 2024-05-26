@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pladau.Models;
+using Pladau.Services;
 using System.Diagnostics;
 
 namespace Pladau.Controllers
@@ -7,23 +8,42 @@ namespace Pladau.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApiService _apiService;
+        public HomeController(ILogger<HomeController> logger, ApiService apiService)
         {
+            _apiService = apiService;
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            Console.WriteLine("Hello World");
-             Console.WriteLine("Hello World");
-              Console.WriteLine("Hello World");
-            return View();
+
+
+            var admins = await _apiService.GetAdminAsync();
+            return View(admins);
         }
 
+        public async Task<IActionResult> University()
+        {
+            var universities = await _apiService.GetAllUniversitiesAsync();
+            return View(universities);
+
+        }
+
+        public async Task<IActionResult> Carrer()
+        {
+            var universities = await _apiService.GetAllUniversitiesAsync();
+            return View(universities);
+        }
         public IActionResult Privacy()
         {
             return View();
+        }
+
+
+        public IActionResult Modify()
+        {
+            return RedirectToAction("Index", "Modify");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
